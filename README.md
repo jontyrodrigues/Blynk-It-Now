@@ -29,7 +29,7 @@ https://blynkapi.docs.apiary.io/#reference/0/write-pin-value-via-get/write-pin-v
 1. Make a blynk account make a sketch and add a button which controls pin V0 (this is for testing no need to do this).
 2. Once you make a sketch you will be emailed your auth token use this in your code.
 
-<h3>Step 3</h2>
+<h2>Step 3</h2>
 1. Download the IFTTT app on your phone
 2. Create a new applet
 3. In the use google assistant and use whatever you want i used say a simple phrase use whichever phrase you want.
