@@ -3,10 +3,10 @@ Using blynk and ifttt's google assistant integration toggle switches using a Nod
 This project references https://gist.github.com/xmfcx/3e6be68dd655cd7058085702e0bcb4b0
 
 <h2>Requirements:</h2>
-1. NodeMCU<br>
-2. Arduino IDE - https://www.arduino.cc/en/main/software
-3. IFTTT for android - https://play.google.com/store/apps/details?id=com.ifttt.ifttt&hl=en_IN
-4. Blynk - https://www.blynk.cc/
+1. NodeMCU <br>
+2. Arduino IDE - https://www.arduino.cc/en/main/software <br>
+3. IFTTT for android - https://play.google.com/store/apps/details?id=com.ifttt.ifttt&hl=en_IN <br>
+4. Blynk - https://www.blynk.cc/ <br>
 
 <h2>Step One</h2>
 1. Upload the sketch given to your NodeMCU using its specifictaions
