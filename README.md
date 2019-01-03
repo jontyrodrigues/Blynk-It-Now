@@ -2,7 +2,7 @@
 Using blynk and ifttt's google assistant integration toggle switches using a NodeMCU as a microcontoller
 This project references https://gist.github.com/xmfcx/3e6be68dd655cd7058085702e0bcb4b0
 
-<h2>Requirements:</h2>
+<h2>Requirements</h2>
 1. NodeMCU <br>
 2. Arduino IDE - https://www.arduino.cc/en/main/software <br>
 3. IFTTT for android - https://play.google.com/store/apps/details?id=com.ifttt.ifttt&hl=en_IN <br>
