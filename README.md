@@ -41,3 +41,6 @@ https://blynkapi.docs.apiary.io/#reference/0/write-pin-value-via-get/write-pin-v
 9. Mine Url looks something like this: http://188.166.206.43/My-Auth-Token/update/V0?value=1 .<br>
 
 Now check weather it works you can also make a widget button first in the if statment to check wether it works or not
+
+<h2>Notice: High Voltage AC is dangerous please do not attempt if you don't have any experience</h2>
+Also have provided my diagram for 2 way switch configuration which i use to toggle the input i use a spdt relay board for arduino i.e. 3.3V and a spdt switch to toggle the inputs.
