@@ -16,30 +16,50 @@
   Blynk library is licensed under MIT license
   This example code is in public domain.
 
- /* Comment this out to disable prints and save space */
-//#define BLYNK_PRINT Serial
+ *************************************************************
+
+  This sketch shows how to read values from Virtual Pins
+
+  App project setup:
+    Slider widget (0...100) on Virtual Pin V1
+ *************************************************************/
+
+/* Comment this out to disable prints and save space */
+#define BLYNK_PRINT Serial
 
 
 #include <ESP8266WiFi.h>
 #include <BlynkSimpleEsp8266.h>
-int Light = 14; /* GPIO14(D5)*/
-int Light0 = 12;  /* GPIO12(D6)*/
+int Light = 14;
+int Light0 = 12;
+int Enable = 13;
 bool enabled = false;
+bool parameter;
 
 // You should get Auth Token in the Blynk App.
 // Go to the Project Settings (nut icon).
-char auth[] = "auth-token";//auth token which was emailed to you
+char auth[] = ""; //put you auth token here
 
 // Your WiFi credentials.
 // Set password to "" for open networks.
-char ssid[] = "Your SSID"; // wifi name
-char pass[] = "Your Password";//wifi password
+char ssid[] = ""; //put your ssid token here
+char pass[] = ""; //put your password token here
 
-// This function will be called every time V0 is updated
-// in Blynk app writes values to the Virtual Pin V0
+// This function will be called every time Slider Widget
+// in Blynk app writes values to the Virtual Pin V1
 BLYNK_WRITE(V0)
 {
- if(enabled == false)
+ if(param.asInt() == 1)
+ {
+  parameter = true;
+ }
+ else
+ {
+   parameter = false;
+ }
+ if(parameter == !digitalRead(Enable))
+ {
+  if(enabled == false)
   {
     digitalWrite(Light,HIGH);
     enabled = true;
@@ -49,13 +69,16 @@ BLYNK_WRITE(V0)
     digitalWrite(Light,LOW);
     enabled = false;
   }
-  Serial.println("Toggled");
+ }
+ 
+ // Serial.println("Toggled");
 }
 
 void setup()
 {
   pinMode(Light, OUTPUT); 
   pinMode(Light0, OUTPUT);
+  pinMode(Enable, INPUT);
 
   // Debug console
   Serial.begin(115200);
